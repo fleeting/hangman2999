@@ -1,0 +1,17 @@
+{
+  "name": "hangman2999",
+  "main": "app.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/fleeting/hangman2999",
+  "authors": [
+    "James Fleeting <hello@jamesfleeting.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.5",
+    "ngstorage": "~0.3.9",
+    "normalize.css": "latest",
+    "susy": "latest",
+    "monkee-mixins": "1.x"
+  }
+}

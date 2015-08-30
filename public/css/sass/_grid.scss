@@ -1,0 +1,79 @@
+@import '../../components/susy/sass/_susy';
+
+$columns: 12;
+
+$susy: (
+  columns: $columns,
+  container: 1200px,
+  column-width: 70px,
+  gutter-position: inside-static,
+  gutters: 30px/70px
+);
+
+.row {
+  margin-bottom: $block-margin;
+  @include container();
+}
+
+.row-flush {
+  @include container();
+}
+
+.full {
+  @include span(12 of 12);
+  float: none;
+}
+
+.half {
+width: 100%;
+margin-bottom: $mobile-paragraph-margin;
+
+  @include bp($bp-grid-columns) {
+    @include span(6 of 12);
+  }
+}
+
+.two-third {
+  width: 100%;
+  margin-bottom: $mobile-paragraph-margin;
+  padding: 0 15px;
+  @include bp($bp-grid-columns) {
+    @include span(8 of 12);
+  }
+}
+
+.one-third {
+  width: 100%;
+  margin-bottom: $mobile-paragraph-margin;
+  padding: 0 15px;
+
+  @include bp($bp-grid-columns) {
+    @include span(4 of 12);
+  }
+}
+
+.flush-left {
+  padding-left: 0;
+}
+
+.flush-right {
+  padding-right: 0;
+}
+
+.flush-bottom {
+  margin-bottom: 0;
+}
+
+@for $column from 1 to $columns+1 {
+  .columns-#{$column} {
+    @include span($column of $columns);
+
+    &.flush-left {
+      padding-left: 0;
+    }
+
+    &.flush-right {
+      padding-right: 0;
+    }
+  }
+}

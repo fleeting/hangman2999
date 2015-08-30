@@ -1,0 +1,51 @@
+$palettes: (
+  white: (
+    base: #fff
+  ),
+  black: (
+    base: #303030
+  ),
+  blue: (
+    base: #21ABB5
+  ),
+  green: (
+    base: #8ABB23
+  ),
+  purple: (
+    base: #553478
+  )
+);
+
+// Vertical Spacing
+$paragraph-margin: em-calc(30);
+$block-margin: em-calc(46);
+$content-block-margin: em-calc(76);
+$mobile-paragraph-margin: em-calc(29);
+$mobile-content-block-margin: em-calc(60);
+
+// Grid widths
+$column-width: 60;
+$gutter-width: 30;
+$bp-row-width: 1080;
+$bp-grid-columns: 680;
+
+// Fonts
+$heading-font: silkscreennormal, sans-serif;
+$body-font: sans-serif;
+$icon-font: 'icomoon';
+
+$icons: (
+  trophy: "\e600",
+  fire: "\e601",
+  smile: "\e602",
+  smile_alt: "\e603",
+  frown: "\e604",
+  frown_alt: "\e605",
+  cross: "\e606",
+  check: "\e607",
+  arrow_up: "\e608",
+  arrow_down: "\e609",
+  facebook: "\e60a",
+  twitter: "\e60b",
+  github: "\e60c",
+);

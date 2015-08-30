@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="hangmanApp">
+<head>
+  <script src="/components/angular/angular.min.js"></script>
+  <script src="/components/ngstorage/ngStorage.min.js"></script>
+  <script src="/js/app.min.js"></script>
+
+   <link rel="stylesheet" href="/css/app.min.css">
+</head>
+<body ng-controller="GameController" ng-class="{'welcome': !activeGame}">
+  <header role="banner">
+    <div class="row">
+      <div class="half flush-bottom">
+        <h1>Hangman 2999</h1>
+      </div>
+
+      <div class="half flush-bottom">
+        <ul class="stats styleless">
+          <li class="wins"><strong>Wins</strong>: {{$storage.hangman.wins}}</li>
+          <li class="loses"><strong>Loses</strong>: {{$storage.hangman.loses}}</li>
+          <li class="streak"><strong>Streak</strong>: {{$storage.hangman.streak}}</li>
+      </div>
+    </div>
+  </header>
+
+  <button ng-click="newGame()">New Game</button>
+
+  <ng-include src="'/images/hangbot.svg'" class="hangman-state-{{guessesLeft}}"></ng-include>
+
+  <div ng-show="activeGame">
+    <p><strong>Current Word</strong>: {{currentWord}}</p>
+
+    <p><strong>Incorrect guesses Left</strong>: {{guessesLeft}}</p>
+
+    <h2 ng-show="youLost">Game Over!</h2>
+    <h2 ng-show="youWin">You Win!</h2>
+
+    <ul class="word">
+      <li ng-repeat="character in workingWord track by $index" ng-class="{spacer:pendingCharacter(character), placeholder: !pendingCharacter(character)}">{{character}}</li>
+    </ul>
+
+    <ul class="alphabet">
+      <li ng-repeat="character in characters track by $index" ng-click="makeGuess(character)" ng-class="{disabled: charactersGuessed.indexOf(character) != -1}">{{character}}</span>
+    </ul>
+  </div>
+</body>
+</html>

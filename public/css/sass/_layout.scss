@@ -1,0 +1,144 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #f1f1f1;
+}
+
+[role=banner] {
+  background: palette(blue);
+
+  .row {
+    padding: 25px 0;
+  }
+}
+
+.stats {
+  float: right;
+
+  li {
+    display: inline-block;
+    margin-left: 40px;
+    font-family: $heading-font;
+    font-size: 24px;
+
+    &:before {
+      @extend .icon;
+      position: relative;
+      top: 2px;
+      left: -8px;
+      font-size: 20px;
+    }
+  }
+
+  .wins:before {
+    content: map-get($icons, trophy);
+  }
+
+  .loses:before {
+    content: map-get($icons, cross);
+    font-size: 17px;
+  }
+
+  .streak:before {
+    content: map-get($icons, fire);
+  }
+}
+
+.disabled {
+  opacity: 0.2;
+}
+
+/* Helper Classes */
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-left, [data-text-align='left'] {
+  text-align: left;
+}
+
+.text-right, [data-text-align='right'] {
+  text-align: right;
+}
+
+.text-center, [data-text-align='center'] {
+  text-align: center;
+}
+
+.cf {
+  @include clearfix();
+}
+
+.show {
+  display: block;
+}
+
+/* Hide from browsers */
+.hide, [hidden] {
+  display: none;
+}
+
+/* Hide from browsers & screenreaders */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Hide from browsers, available to screenreaders */
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Hide from browsers & screenreaders, maintain layout */
+.invisible {
+  visibility: hidden;
+}
+
+/* The Kellum Method */
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Clearfix: contain floats */
+.cf {
+  @include clearfix();
+}
+
+::-moz-selection {
+  background: #62aaf2;
+  color:#fff;
+  text-shadow: none;
+}
+
+::selection {
+  background:#62aaf2;
+  color:#fff;
+  text-shadow: none;
+}

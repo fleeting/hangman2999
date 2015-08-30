@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="hangbot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 900 800" style="enable-background:new 0 0 900 800;" xml:space="preserve">
+
+  <style>
+    .color-one {
+      fill: #303030;
+    }
+
+    .color-two {
+      fill: #21ABB5;
+    }
+
+    .color-three {
+      fill: #8ABB23;
+    }
+
+    .color-four {
+      fill: #553478;
+    }
+
+    .color-five {
+      fill: #303030;
+    }
+
+    .color-six {
+      fill: #303030;
+    }
+  </style>
+
+  <!--
+  0 - #27122d
+  1 - #f7902b
+  2 - #ab4287
+  3 - #2a152f
+  4 - #fff
+  5 - #58bdc5
+  -->
+
+  <g id="leg_left">
+    <g id="leg_left_base">
+      <rect class="color-one" x="481.6" y="551.5" width="10.5" height="82.5"/>
+    </g>
+
+    <g id="leg_left_knee">
+      <ellipse class="color-two" cx="486.8" cy="592.4" rx="12.4" ry="11.3"/>
+    </g>
+
+    <g id="leg_left_foot">
+      <path class="color-three" d="M486.8,622.8c-13.7,0-24.9,9.5-26.3,21.7h52.5C511.7,632.3,500.5,622.8,486.8,622.8z"/>
+    </g>
+  </g> <!-- /#leg_left -->
+
+  <g id="leg_right">
+    <g id="leg_right_base">
+      <rect class="color-one" x="533.2" y="551.5" width="10.5" height="82.5"/>
+    </g>
+
+    <g id="leg_right_knee">
+      <ellipse class="color-two" cx="538.4" cy="592.4" rx="12.4" ry="11.3"/>
+    </g>
+
+    <g id="leg_right_foot">
+      <path class="color-three" d="M538.4,622.8c-13.7,0-24.9,9.5-26.3,21.7h52.5C563.4,632.3,552.1,622.8,538.4,622.8z"/>
+    </g>
+  </g> <!-- /#leg_right -->
+
+  <g id="arm_left">
+    <g id="arm_left_base">
+      <path class="color-one" d="M408.8,563.8l17.2-1.8c-2.6-25.7,1.4-44.3,12-55.4c11.3-11.8,26.5-11.1,27.1-11.1l-2-17.7					c-0.9-0.1-20.4-1-37.4,16.6C411.4,509.4,405.6,532.7,408.8,563.8z"/>
+    </g>
+
+    <g id="arm_left_hand">
+      <path class="color-three" d="M415.5,559.3c10.1-2.5,20.3,3.8,22.8,13.9c0.6,2.5,0.7,5,0.3,7.5l-7.9,1.9c0.2-1.3,0.2-2.6-0.1-4					c-1.3-5.4-6.7-8.7-12.1-7.4s-8.7,6.7-7.4,12.1c0.3,1.3,0.9,2.6,1.7,3.6l-7.9,1.9c-1.4-2-2.5-4.2-3.2-6.8					C399.1,571.9,405.4,561.7,415.5,559.3z"/>
+    </g>
+  </g> <!-- /#arm_left -->
+
+  <g id="arm_right">
+    <g id="arm_right_base">
+      <path class="color-one" d="M618,563.8l-17.2-1.8c2.6-25.7-1.4-44.3-12-55.4c-11.3-11.8-26.5-11.1-27.1-11.1l1.3-17.5					c0.9-0.1,21.1-1.2,38.2,16.4C615.5,509.4,621.2,532.7,618,563.8z"/>
+    </g>
+
+    <g id="arm_right_hand">
+      <path class="color-three" d="M611.3,559.3c-10.1-2.5-20.3,3.8-22.8,13.9c-0.6,2.5-0.7,5-0.3,7.5l7.9,1.9c-0.2-1.3-0.2-2.6,0.2-4					c1.3-5.4,6.7-8.7,12.1-7.4c5.4,1.3,8.7,6.7,7.4,12.1c-0.3,1.3-0.9,2.6-1.7,3.6l7.9,1.9c1.4-2,2.5-4.2,3.2-6.8C627.7,571.9,621.5,561.7,611.3,559.3z"/>
+    </g>
+  </g> <!-- /#arm_right -->
+
+  <g id="torso">
+    <path class="color-four" d="M455.9,484.4l20.7,68.9h71.8l20.7-68.9c1-3.2-1.4-6.5-4.8-6.5H460.7C457.4,477.9,455,481.1,455.9,484.4z"/>
+  </g>
+
+  <g id="gallow_base">
+    <rect x="99.5" y="777" class="color-five" width="296.3" height="18"/>
+  </g>
+
+  <g id="gallow_pole">
+    <polygon class="color-six" points="545.9,109 256.6,109 238.8,109 238.6,109 238.6,783 256.6,783 256.6,127 545.9,127 "/>
+  </g>
+
+  <g id="gallow_corner">
+    <rect x="321.3" y="84.6" transform="matrix(0.7321 0.6811 -0.6811 0.7321 228.9134 -169.7839)" class="color-six" width="18" height="243.1"/>
+  </g>
+
+  <g id="gallow_rope">
+    <rect x="509.9" y="116.4" class="color-five" width="7" height="234.1"/>
+  </g>
+
+  <g id="head">
+    <g id="antenna_right">
+      <g id="antenna_right_pole">
+        <polygon class="color-five" points="559.3,302.4 552.3,300.7 541,346.2 548.7,345.3"/>
+      </g>
+
+      <g id="antenna_right_base">
+        <path class="color-five" d="M547.2,336.2c-7.7-1.9-15.4,2.8-17.3,10.5c-0.1,0.3-0.1,0.6-0.1,0.8l27.1-3.2				C555.1,340.4,551.7,337.3,547.2,336.2z"/>
+      </g>
+
+      <g id="antenna_right_ball">
+        <path class="color-four" d="M576,297.2c-2.4,9.7-12.3,15.7-22,13.3c-9.7-2.4-15.7-12.3-13.3-22c2.4-9.7,12.3-15.7,22-13.3				C572.4,277.6,578.4,287.5,576,297.2z"/>
+      </g>
+
+      <g id="antenna_right_glare">
+        <ellipse transform="matrix(0.9808 -0.195 0.195 0.9808 -45.6843 116.3481)" fill="#fff" cx="568.2" cy="290.3" rx="3.7" ry="7.9"/>
+      </g>
+    </g> <!-- /#antenna_right -->
+
+    <g id="antenna_left">
+      <g id="antenna_left_pole">
+        <polygon class="color-five" points="434.9,314.4 428.5,317.7 448.7,357 456.3,356.1"/>
+      </g>
+
+      <g id="antenna_left_base">
+        <path class="color-five" d="M467.3,353.9c-3.6-7-12.3-9.8-19.3-6.2c-4.1,2.1-6.7,5.9-7.5,10.1l27.1-3.2				C467.5,354.5,467.4,354.2,467.3,353.9z"/>
+      </g>
+
+      <g id="antenna_left_ball">
+        <path class="color-four" d="M411.1,316.5c4.6,8.9,15.5,12.4,24.5,7.8c8.9-4.6,12.4-15.5,7.8-24.5c-4.6-8.9-15.5-12.4-24.5-7.8				C410,296.6,406.5,307.6,411.1,316.5z"/>
+      </g>
+
+      <g id="antenna_left_glare">
+        <ellipse transform="matrix(0.7476 -0.6641 0.6641 0.7476 -89.4987 364.5679)" fill="#fff" cx="434.9" cy="300" rx="3.7" ry="7.9"/>
+      </g>
+    </g> <!-- /#antenna_left -->
+
+    <g class="face">
+      <g id="face_base">
+        <path class="color-two" d="M611.7,467.7l-192.2,22.5L406,374.7c-0.8-7.1,4.2-13.5,11.3-14.3l166.7-19.5c7.1-0.8,13.5,4.2,14.3,11.3L611.7,467.7z"/>
+      </g>
+
+      <g id="face_mouth">
+        <g id="face_mouth_one">
+          <path class="color-six" d="M482,451.2c-1,0.1-1.8,0.6-2.4,1.3c-0.6,0.7-0.9,1.7-0.8,2.7c0.1,0.9,0.6,1.8,1.3,2.4					c1.5,1.1,3.9,0.9,5.1-0.6c0.6-0.7,0.9-1.7,0.8-2.7c-0.1-1-0.6-1.8-1.3-2.4C484,451.4,483,451.1,482,451.2z"/>
+        </g>
+
+        <g id="face_mouth_two">
+          <path class="color-six" d="M492.2,443.7c-0.2,0-0.4,0.1-0.7,0.1l0,0c-1.9,0.6-3,2.6-2.4,4.5c0.6,1.9,2.6,3,4.5,2.4				c1.9-0.6,3-2.6,2.4-4.5C495.5,444.5,493.9,443.5,492.2,443.7z"/>
+        </g>
+
+        <g id="face_mouth_three">
+          <path class="color-six" d="M506,440c-0.1,0-0.3,0.1-0.4,0.1c-2,0.4-3.2,2.4-2.7,4.3c0.4,2,2.4,3.2,4.3,2.7c1.9-0.4,3.2-2.4,2.7-4.3C509.5,441,507.8,439.8,506,440z"/>
+        </g>
+
+        <g id="face_mouth_four">
+          <path class="color-six" d="M519.3,439.6C519.3,439.6,519.3,439.6,519.3,439.6c-2,0.3-3.4,2.1-3.2,4.1c0.3,2,2.1,3.4,4.1,3.1				c2-0.3,3.3-2.1,3.1-4.1C523.1,440.7,521.3,439.3,519.3,439.6z"/>
+        </g>
+      </g> <!-- /#face_mouth -->
+
+      <g id="eye_right_alive">
+        <circle cx="540" cy="400" r="11" class="color-five"></circle>
+      </g>
+
+      <g id="eye_left_alive">
+        <circle cx="470" cy="410" r="11" class="color-five"></circle>
+      </g>
+
+      <g id="eye_right">
+        <polygon id="eye_right_one" class="color-five" points="572.7,389.8 566.7,385.8 547.6,414 555.1,415.8"/>
+        <polygon id="eye_right_two" class="color-five" points="551,388.4 547,394.4 575.2,413.4 576.9,405.9 				"/>
+      </g>
+
+      <g id="eye_left">
+        <polygon id="eye_left_one" class="color-five" points="451.8,425.9 458.8,427.3 466.1,394.1 458.5,395.3"/>
+        <polygon id="eye_left_two" class="color-five" points="477.4,417.6 478.8,410.6 445.6,403.3 446.8,410.9"/>
+      </g>
+    </g> <!-- /#face -->
+  </g> <!-- /#head -->
+</svg>

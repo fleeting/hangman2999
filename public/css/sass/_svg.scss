@@ -1,0 +1,88 @@
+#hangbot {
+  float: right;
+  width: 600px;
+}
+
+$svg_elements: leg_left leg_right arm_left arm_right torso gallow_base gallow_pole gallow_corner gallow_rope head eye_right eye_left eye_right_alive eye_left_alive face_mouth;
+
+@each $svg_element in $svg_elements {
+  ##{$svg_element} {
+    display: none;
+  }
+}
+
+.welcome {
+  #leg_left, #leg_right, #arm_left, #arm_right, #torso, #head, #eye_right_alive, #eye_left_alive, #face_mouth {
+    display: block;
+  }
+
+  #face_mouth {
+   @include translate(11px, 0);
+  }
+
+  #face_mouth_two {
+    @include translate(5px, 10px);
+  }
+
+  #face_mouth_three {
+    @include translate(5px, 10px);
+  }
+}
+
+.hangman-state-9 #gallow_base {
+  display: block;
+}
+
+.hangman-state-8 {
+  #gallow_base, #gallow_pole, #gallow_corner {
+    display: block;
+  }
+}
+
+.hangman-state-7 {
+  #gallow_base, #gallow_pole, #gallow_corner, #gallow_rope {
+    display: block;
+  }
+}
+
+.hangman-state-6 {
+  #gallow_base, #gallow_pole, #gallow_corner, #gallow_rope, #head {
+    display: block;
+  }
+}
+
+.hangman-state-5 {
+  #gallow_base, #gallow_pole, #gallow_corner, #gallow_rope, #head, #torso {
+    display: block;
+  }
+}
+
+.hangman-state-4 {
+  #gallow_base, #gallow_pole, #gallow_corner, #gallow_rope, #head, #torso, #arm_left {
+    display: block;
+  }
+}
+
+.hangman-state-3 {
+  #gallow_base, #gallow_pole, #gallow_corner, #gallow_rope, #head, #torso, #arm_left, #arm_right {
+    display: block;
+  }
+}
+
+.hangman-state-2 {
+  #gallow_base, #gallow_pole, #gallow_corner, #gallow_rope, #head, #torso, #arm_left, #arm_right, #leg_left {
+    display: block;
+  }
+}
+
+.hangman-state-1 {
+  #gallow_base, #gallow_pole, #gallow_corner, #gallow_rope, #head, #torso, #arm_left, #arm_right, #leg_left, #leg_right {
+    display: block;
+  }
+}
+
+.hangman-state-0 {
+  #gallow_base, #gallow_pole, #gallow_corner, #gallow_rope, #head, #torso, #arm_left, #arm_right, #leg_left, #leg_right, #eye_left, #eye_right, #face_mouth {
+    display: block;
+  }
+}
