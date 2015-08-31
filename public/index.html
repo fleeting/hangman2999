@@ -45,7 +45,7 @@
   <div class="row" ng-show="activeGame">
     <div class="row">
       <ul class="word styless">
-        <li ng-repeat="character in workingWord track by $index" ng-class="{pending: pendingCharacter(character), guessed: !pendingCharacter(character)}"><span ng-if="pendingCharacter(character)">&nbsp;</span>{{character}}</li>
+        <li ng-repeat="character in workingWord track by $index" ng-class="{pending: pendingCharacter(character), guessed: !pendingCharacter(character), space: character === '_'}"><span ng-if="pendingCharacter(character)">&nbsp;</span>{{character}}</li>
       </ul>
     </div>
 

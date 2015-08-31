@@ -114,7 +114,7 @@ button.insert-coins {
 
   li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 9px;
     padding: 20px;
     font-size: 35px;
     font-family: $heading-font;
@@ -131,6 +131,10 @@ button.insert-coins {
   .guessed {
     opacity: 1;
     color: #fff;
+  }
+
+  .space {
+    opacity: 0;
   }
 }
 

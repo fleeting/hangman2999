@@ -709,7 +709,7 @@ button.insert-coins {
   text-align: center; }
   .word li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 9px;
     padding: 20px;
     font-size: 35px;
     font-family: silkscreennormal, sans-serif;
@@ -726,6 +726,8 @@ button.insert-coins {
   .word .guessed {
     opacity: 1;
     color: #fff; }
+  .word .space {
+    opacity: 0; }
 
 .alphabet li {
   display: inline-block;

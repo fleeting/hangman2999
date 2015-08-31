@@ -3,7 +3,11 @@ exports.newGame = function(req, res) {
 
   workingWord = [];
   for (var i = 0; i < selectedWord.length; i++) {
-    workingWord[i] = ' ';
+    if (selectedWord[i] === '_') {
+      workingWord[i] = selectedWord[i];
+    } else {
+      workingWord[i] = ' ';
+    }
   }
 
   req.session.word = selectedWord;
@@ -13,7 +17,8 @@ exports.newGame = function(req, res) {
 
 var selectWord = function() {
   game = require('../game.json');
-  word = game.words[Math.floor(Math.random() * (12 - 1)) + 1];
+  word = game.words[Math.floor(Math.random() * (23 - 1)) + 1];
+  word = word.replace(/ /g, '_');
 
   return word;
 };
