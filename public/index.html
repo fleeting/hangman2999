@@ -13,7 +13,7 @@
   <script src="/components/ngstorage/ngStorage.min.js"></script>
   <script src="/js/app.min.js"></script>
 </head>
-<body ng-controller="GameController" ng-class="{'welcome': !activeGame}">
+<body ng-controller="GameController" ng-class="{'welcome': !activeGame, 'win-screen': youWin}">
   <header role="banner">
     <div class="row">
       <div class="half flush-bottom">
@@ -32,7 +32,7 @@
   <div class="row" ng-show="!activeGame">
     <div class="half">
       <h2>Shall we play a game?</h2>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      <p>Welcome to the year 2999 where for some reason the game <strong>Hangman</strong> is at its height. Not familiar with Hangman? Well, that's a little embarassing. The objective is to guess the word(s) by clicking on the letters. Beware though, <strong>ten</strong> incorrect guesses and game over, do not pass go, kill screen, you lose, and Hangbot dies. Please don't let this happen, you're our only hope. Seriously though, look at Hangbot. He looks pretty happy right now.</p>
 
       <button ng-click="newGame()" class="insert-coins">3 Tokens<span>Insert coins to play.</span></button>
     </div>
@@ -44,28 +44,33 @@
 
   <div class="row" ng-show="activeGame">
     <div class="row">
+      <h2 ng-show="youWin">Congratulations, you've won! <a ng-click="newGame()">Shall we play again</a>?</h2>
+      <h2 ng-show="youLost">Game Over! <a ng-click="newGame()">Shall we play again</a>?</h2>
+
       <ul class="word styless">
         <li ng-repeat="character in workingWord track by $index" ng-class="{pending: pendingCharacter(character), guessed: !pendingCharacter(character), space: character === '_'}"><span ng-if="pendingCharacter(character)">&nbsp;</span>{{character}}</li>
       </ul>
     </div>
 
     <div class="half">
-      <p><strong>Current Word</strong>: {{currentWord}}</p> <!-- TODO: Remove this for production. -->
-
-      <p><strong>Incorrect guesses Left</strong>: {{guessesLeft}}</p> <!-- TODO: Style guesses left. I'm thinking different phrases for each number. -->
-
-      <h2 ng-show="youLost">Game Over!</h2> <!-- TODO: Style a game over screen. Maybe a different message if you were on a streak. -->
-      <h2 ng-show="youWin">You Win!</h2> <!-- TODO: Style a win screen. -->
-
-      <!-- TODO: * Add instructions. * Add restart game button. -->
-
       <ul class="alphabet styleless">
         <li ng-repeat="character in characters track by $index" ng-click="makeGuess(character)" ng-class="{disabled: charactersGuessed.indexOf(character) != -1}">{{character}}</span>
       </ul>
+
+      <h3 ng-show="guessesLeft == 9 && !youWin && !youLost">First incorrect guess. I suggest not making this a habit, <strong>nine</strong> more.</h3>
+      <h3 ng-show="guessesLeft == 8 && !youWin && !youLost">Don't worry about that one. <strong>Eight</strong> remaining.</h3>
+      <h3 ng-show="guessesLeft == 7 && !youWin && !youLost">It's okay, we all make mistakes. <strong>Seven</strong> remaining.</h3>
+      <h3 ng-show="guessesLeft == 6 && !youWin && !youLost">Okay, I'm starting to get a little worried now. <strong>Six</strong> remaining.</h3>
+      <h3 ng-show="guessesLeft == 5 && !youWin && !youLost">You are half way to losing. <strong>Five</strong> remaining.</h3>
+      <h3 ng-show="guessesLeft == 4 && !youWin && !youLost">Things can only get better from here. <strong>Four</strong> remaining.</h3>
+      <h3 ng-show="guessesLeft == 3 && !youWin && !youLost">Or not. Is he in any pain? <strong>Three</strong> remaining.</h3>
+      <h3 ng-show="guessesLeft == 2 && !youWin && !youLost">The end is nigh. <strong>Two</strong> remaining.</h3>
+      <h3 ng-show="guessesLeft == 1 && !youWin && !youLost">Poor Hangbot, he never stood a chance. <strong>One</strong> remaining.</h3>
     </div>
 
     <div class="half">
-      <ng-include src="'/images/hangbot.svg'" class="hangman-state-{{guessesLeft}}"></ng-include>
+      <ng-include ng-if="!youWin" src="'/images/hangbot.svg'" class="hangman-state-{{guessesLeft}}"></ng-include>
+      <ng-include ng-if="youWin" src="'/images/hangbot-alive.svg'"></ng-include>
     </div>
   </div>
 

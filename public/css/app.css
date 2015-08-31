@@ -870,6 +870,17 @@ h1, .h1 {
   font-size: 55px;
   font-family: silkscreennormal, sans-serif; }
 
+h2, .h2 {
+  font-size: 35px;
+  font-family: silkscreennormal, sans-serif;
+  text-align: center; }
+
+h3, .h3 {
+  font-size: 20px; }
+  h3 strong, .h3 strong {
+    color: #553478;
+    border-bottom: 5px solid #553478; }
+
 p, ul, ol, blockquote {
   margin: 0 0 1.875em; }
 
@@ -976,21 +987,21 @@ img {
 #face_mouth {
   display: none; }
 
-.welcome #leg_left, .welcome #leg_right, .welcome #arm_left, .welcome #arm_right, .welcome #torso, .welcome #head, .welcome #eye_right_alive, .welcome #eye_left_alive, .welcome #face_mouth {
+.welcome #leg_left, .welcome #leg_right, .welcome #arm_left, .welcome #arm_right, .welcome #torso, .welcome #head, .welcome #eye_right_alive, .welcome #eye_left_alive, .welcome #face_mouth, .win-screen #leg_left, .win-screen #leg_right, .win-screen #arm_left, .win-screen #arm_right, .win-screen #torso, .win-screen #head, .win-screen #eye_right_alive, .win-screen #eye_left_alive, .win-screen #face_mouth {
   display: block; }
-.welcome #face_mouth {
+.welcome #face_mouth, .win-screen #face_mouth {
   -webkit-transform: translate(11px, 0);
   -moz-transform: translate(11px, 0);
   -ms-transform: translate(11px, 0);
   -o-transform: translate(11px, 0);
   transform: translate(11px, 0); }
-.welcome #face_mouth_two {
+.welcome #face_mouth_two, .win-screen #face_mouth_two {
   -webkit-transform: translate(5px, 10px);
   -moz-transform: translate(5px, 10px);
   -ms-transform: translate(5px, 10px);
   -o-transform: translate(5px, 10px);
   transform: translate(5px, 10px); }
-.welcome #face_mouth_three {
+.welcome #face_mouth_three, .win-screen #face_mouth_three {
   -webkit-transform: translate(5px, 10px);
   -moz-transform: translate(5px, 10px);
   -ms-transform: translate(5px, 10px);

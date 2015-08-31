@@ -10,7 +10,7 @@ $svg_elements: leg_left leg_right arm_left arm_right torso gallow_base gallow_po
   }
 }
 
-.welcome {
+.welcome, .win-screen {
   #leg_left, #leg_right, #arm_left, #arm_right, #torso, #head, #eye_right_alive, #eye_left_alive, #face_mouth {
     display: block;
   }
