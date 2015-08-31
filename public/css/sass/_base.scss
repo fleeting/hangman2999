@@ -9,7 +9,9 @@ $palettes: (
     base: #21ABB5
   ),
   green: (
-    base: #8ABB23
+    base: #8ABB23,
+    mid: #7CA625,
+    dark: #709327
   ),
   purple: (
     base: #553478
@@ -27,7 +29,7 @@ $mobile-content-block-margin: em-calc(60);
 $column-width: 60;
 $gutter-width: 30;
 $bp-row-width: 1080;
-$bp-grid-columns: 680;
+$bp-grid-columns: 780;
 
 // Fonts
 $heading-font: silkscreennormal, sans-serif;

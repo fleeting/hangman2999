@@ -9,26 +9,53 @@ html, body {
 }
 
 [role=banner] {
+  text-align: center;
   background: palette(blue);
+
+  @include bp($bp-grid-columns) {
+    text-align: left;
+  }
 
   .row {
     padding: 25px 0;
   }
+
+  h1 {
+    margin-bottom: 20px;
+
+    @include bp($bp-grid-columns) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .stats {
-  float: right;
+  text-align: center;
+
+  @include bp($bp-grid-columns) {
+    float: right;
+    text-align: left;
+  }
 
   li {
     display: inline-block;
     margin-left: 40px;
+    margin-bottom: 12px;
     font-family: $heading-font;
     font-size: 24px;
+
+    @include bp($bp-grid-columns) {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
 
     &:before {
       @extend .icon;
       position: relative;
-      top: 2px;
+      top: 0;
       left: -8px;
       font-size: 20px;
     }
@@ -45,6 +72,111 @@ html, body {
 
   .streak:before {
     content: map-get($icons, fire);
+  }
+}
+
+button.insert-coins {
+  padding: 15px 30px;
+  font-size: 50px;
+  font-family: $heading-font;
+  text-align: center;
+
+  @include bp($bp-grid-columns) {
+    padding: 15px 30px 15px 71px;
+    font-size: 60px;
+
+    &:before {
+      position: absolute;
+      top: 14px;
+      left: 35px;
+      display: block;
+      width: 12px;
+      height: 76px;
+      content: '';
+      background: #333;
+      @include transition(all 0.3s ease);
+    }
+  }
+
+  &:hover, &:active, &.current {
+    top: 6px;
+
+    @include bp($bp-grid-columns) {
+      &:before {
+        background: #515151;
+      }
+    }
+  }
+}
+
+.word {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 20px;
+    font-size: 35px;
+    font-family: $heading-font;
+    text-align: center;
+    background: palette(purple);
+    @include transition(all 1s ease);
+  }
+
+  .pending {
+    opacity: 0.5;
+    color: palette(purple);
+  }
+
+  .guessed {
+    opacity: 1;
+    color: #fff;
+  }
+}
+
+.alphabet {
+  li {
+    display: inline-block;
+    width: 38px;
+    margin: 0 10px 10px;
+    padding: 8px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    background: palette(green);
+    cursor: pointer;
+
+    &:hover, &:active {
+      background: palette(green, mid);
+    }
+  }
+}
+
+footer {
+  padding: 18px 0;
+  font-size: 15px;
+  line-height: 1.8;
+  border-top: 10px solid palette(blue);
+  border-left: 10px solid palette(blue);
+
+  p {
+    margin: 0;
+  }
+
+  .half {
+    margin-bottom: 20px;
+
+    @include bp($bp-grid-columns) {
+      margin-bottom: 0;
+    }
+  }
+
+  [data-text-align='right'] {
+    text-align: left;
+
+    @include bp($bp-grid-columns) {
+      text-align: right;
+    }
   }
 }
 

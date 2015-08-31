@@ -61,13 +61,13 @@ hangmanApp.controller('GameController', ['$scope', '$http', '$localStorage', '$e
         }
       }
     });
+  };
 
-    $scope.pendingCharacter = function(character) {
-      if (character === ' ') {
-        return true;
-      } else {
-        return false;
-      }
-    };
+  $scope.pendingCharacter = function(character) {
+    if (character === ' ') {
+      return true;
+    } else {
+      return false;
+    }
   };
 },]);

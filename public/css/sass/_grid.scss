@@ -20,16 +20,16 @@ $susy: (
 }
 
 .full {
-  @include span(12 of 12);
+  @include span(12);
   float: none;
 }
 
 .half {
-width: 100%;
-margin-bottom: $mobile-paragraph-margin;
+  @include span(12);
+  margin-bottom: $mobile-paragraph-margin;
 
   @include bp($bp-grid-columns) {
-    @include span(6 of 12);
+    @include span(6);
   }
 }
 
@@ -37,6 +37,7 @@ margin-bottom: $mobile-paragraph-margin;
   width: 100%;
   margin-bottom: $mobile-paragraph-margin;
   padding: 0 15px;
+
   @include bp($bp-grid-columns) {
     @include span(8 of 12);
   }

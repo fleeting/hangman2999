@@ -1,11 +1,17 @@
 <!doctype html>
-<html ng-app="hangmanApp">
+<html class="no-js" lang="en" ng-app="hangmanApp">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hangman 2999</title>
+
+  <link rel="stylesheet" href="/css/app.min.css">
+
+  <script src="/js/modernizr.js"></script>
   <script src="/components/angular/angular.min.js"></script>
   <script src="/components/ngstorage/ngStorage.min.js"></script>
   <script src="/js/app.min.js"></script>
-
-  <link rel="stylesheet" href="/css/app.min.css">
 </head>
 <body ng-controller="GameController" ng-class="{'welcome': !activeGame}">
   <header role="banner">
@@ -23,25 +29,55 @@
     </div>
   </header>
 
-  <button ng-click="newGame()">New Game</button>
+  <div class="row" ng-show="!activeGame">
+    <div class="half">
+      <h2>Shall we play a game?</h2>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-  <ng-include src="'/images/hangbot.svg'" class="hangman-state-{{guessesLeft}}"></ng-include>
+      <button ng-click="newGame()" class="insert-coins">3 Tokens<span>Insert coins to play.</span></button>
+    </div>
 
-  <div ng-show="activeGame">
-    <p><strong>Current Word</strong>: {{currentWord}}</p>
-
-    <p><strong>Incorrect guesses Left</strong>: {{guessesLeft}}</p>
-
-    <h2 ng-show="youLost">Game Over!</h2>
-    <h2 ng-show="youWin">You Win!</h2>
-
-    <ul class="word">
-      <li ng-repeat="character in workingWord track by $index" ng-class="{spacer:pendingCharacter(character), placeholder: !pendingCharacter(character)}">{{character}}</li>
-    </ul>
-
-    <ul class="alphabet">
-      <li ng-repeat="character in characters track by $index" ng-click="makeGuess(character)" ng-class="{disabled: charactersGuessed.indexOf(character) != -1}">{{character}}</span>
-    </ul>
+    <div class="half" data-text-align="center">
+      <ng-include src="'/images/hangbot-alive.svg'"></ng-include>
+    </div>
   </div>
+
+  <div class="row" ng-show="activeGame">
+    <div class="row">
+      <ul class="word styless">
+        <li ng-repeat="character in workingWord track by $index" ng-class="{pending: pendingCharacter(character), guessed: !pendingCharacter(character)}"><span ng-if="pendingCharacter(character)">&nbsp;</span>{{character}}</li>
+      </ul>
+    </div>
+
+    <div class="half">
+      <p><strong>Current Word</strong>: {{currentWord}}</p> <!-- TODO: Remove this for production. -->
+
+      <p><strong>Incorrect guesses Left</strong>: {{guessesLeft}}</p> <!-- TODO: Style guesses left. I'm thinking different phrases for each number. -->
+
+      <h2 ng-show="youLost">Game Over!</h2> <!-- TODO: Style a game over screen. Maybe a different message if you were on a streak. -->
+      <h2 ng-show="youWin">You Win!</h2> <!-- TODO: Style a win screen. -->
+
+      <!-- TODO: * Add instructions. * Add restart game button. -->
+
+      <ul class="alphabet styleless">
+        <li ng-repeat="character in characters track by $index" ng-click="makeGuess(character)" ng-class="{disabled: charactersGuessed.indexOf(character) != -1}">{{character}}</span>
+      </ul>
+    </div>
+
+    <div class="half">
+      <ng-include src="'/images/hangbot.svg'" class="hangman-state-{{guessesLeft}}"></ng-include>
+    </div>
+  </div>
+
+  <footer class="row" role="contentinfo">
+    <div class="half flush-bottom">
+      <p>Handcrafted with ♥ from Boston, MA by <a href="http://twitter.com/fleetingftw" title="@fleetingftw">James Fleeting</a>.<br />
+      Source code available at <a href="http://code.hangman2999.com">code.hangman2999.com</a>.</p>
+    </div>
+
+    <div class="half flush-bottom" data-text-align="right">
+      <p>"If my calculations are correct, when this baby hits 88 miles per hour..."</p>
+    </div>
+  </footer>
 </body>
 </html>
