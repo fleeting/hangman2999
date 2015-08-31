@@ -11,8 +11,8 @@ app.use(morgan('dev')); // Log all requests to the console.
 
 require('./routes/index.js')(app);
 
-var server = app.listen(3000, function() {
-  var port = server.address().port;
+var port = process.env.PORT || 3000;
 
+var server = app.listen(port, function() {
   console.log('Hangman2999 is listening on port ' + port + '. Good luck and may the odds be ever in your favor.');
 });
