@@ -1,9 +1,0 @@
-{
-  "name": "monkee-mixins",
-  "version": "1.9.0",
-  "main": "_mixins.scss",
-  "ignore": [
-    ".travis.yml",
-    "test/"
-  ]
-}
