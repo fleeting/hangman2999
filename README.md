@@ -16,7 +16,7 @@ You only need a few things to get the app up and running locally.
 
 ## Install
 
-* Clone the repo with `gie clone git@github.com:fleeting/hangman2999.git`.
+* Clone the repo with `git clone git@github.com:fleeting/hangman2999.git`.
 * Install modules and components with `npm install && bower install`.
 * Start up the game with `node app.js`.
 * Check out `http://localhost:3000`.
