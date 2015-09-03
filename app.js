@@ -3,6 +3,7 @@ var app = express();
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
+require('newrelic');
 
 app.use(express.static('public'));
 app.use(session({ secret: 'shhhhhhh', resave: false, saveUninitialized: true }));
