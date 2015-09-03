@@ -20,10 +20,11 @@
   "homepage": "https://github.com/fleeting/hangman2999#readme",
   "dependencies": {
     "body-parser": "^1.13.3",
+    "bower": "1.4.x",
     "express": "^4.13.3",
     "express-session": "^1.11.3",
     "morgan": "^1.6.1",
-    "bower": "1.4.x"
+    "newrelic": "^1.22.0"
   },
   "devDependencies": {
     "gulp": "3.9.x",
