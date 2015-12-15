@@ -1,0 +1,7 @@
+{
+  "name": "hangman2999",
+  "description": "The classic game of Hangman created with Angular, Node, and Express.",
+  "repository": "https://github.com/fleeting/hangman2999",
+  "logo": "http://www.hangman2999.com/images/logo-box.png",
+  "keywords": ["node", "express", "hangman", "game", "angular"]
+}
