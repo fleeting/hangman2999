@@ -21,6 +21,18 @@ You only need a few things to get the app up and running locally.
 * Start up the game with `node app.js`.
 * Check out `http://localhost:3000`.
 
+## Deploying to Heroku
+
+```
+heroku create
+git push heroku master
+heroku open
+```
+
+Alternatively, you can deploy your own copy of the app using the one click button:
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## License
 
 MIT
