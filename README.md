@@ -1,4 +1,4 @@
-# hangman2999
+# hangman2999 [![GitHub version](https://badge.fury.io/gh/fleeting%2Fhangman2999.svg)](https://badge.fury.io/gh/fleeting%2Fhangman2999) ![VersionEye](https://www.versioneye.com/user/projects/56702b8a107997003e000251/badge.svg)
 
 The classic game of Hangman created with Angular, Node, and Express. This was a learning experience in Angular and Express and is the product of a weekend of hacking. Handcrafted with ♥ from Boston, MA by [James Fleeting](http://twitter.com/fleetingftw).
 
@@ -21,7 +21,7 @@ You only need a few things to get the app up and running locally.
 * Start up the game with `node app.js`.
 * Check out `http://localhost:3000`.
 
-## Deploying to Heroku
+## Deploying to [Heroku](http://heroku.com)
 
 ```
 heroku create
